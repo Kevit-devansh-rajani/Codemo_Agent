@@ -22,8 +22,28 @@ Codemo is an AI-powered code generation tool that iteratively writes and refines
 *   **Backend:** Python
 *   **Frontend:** Streamlit
 *   **LLM Interaction:** LiteLLM
-*   **LLM Provider:** Cohere (Command R+)
+*   **LLM Providers:** Cohere (Command R+), OpenAI (GPT-3.5 Turbo), and others supported by LiteLLM.
 *   **Observability:** Langfuse
+
+### Using a Different LLM (e.g., OpenAI)
+
+Thanks to LiteLLM, you can easily switch to other language models like OpenAI's GPT-3.5 Turbo.
+
+1.  **Update the model in `litellm_langfuse.py`:**
+    Change the `MODEL` constant to the desired model name:
+    ```python
+    # Before
+    MODEL = "cohere/command-r-plus-08-2024"
+
+    # After
+    MODEL = "gpt-3.5-turbo"
+    ```
+
+2.  **Set the API key:**
+    Add the API key for the new model to your `.env` file:
+    ```
+    OPENAI_API_KEY="your-openai-api-key"
+    ```
 
 ## 📦 Setup and Installation
 
