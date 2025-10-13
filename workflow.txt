@@ -1,0 +1,14 @@
+1) User opens Streamlit app (app.py) and enters a programming task.
+
+2) code_generator.py sends task + previous feedback to AI (OpenAI GPT) → gets code.
+
+3) code_tester.py runs unit tests on the generated code.
+
+4) If tests fail, feedback is sent to AI → regenerate/refine code.
+
+5) Repeat up to 3 iterations or until all tests pass.
+
+6) Streamlit displays:
+    - Generated code
+    - Test results
+    - Feedback loop status
