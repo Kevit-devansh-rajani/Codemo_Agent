@@ -18,7 +18,7 @@ if st.button("Generate Code"):
             st.info(f"Iteration {iteration}...")
 
             try:
-                code = generate_code(task_description, feedback, iteration)
+                code = generate_code(task_description, feedback)
             except Exception as e:
                 st.error(f"Error generating code: {e}")
                 break
