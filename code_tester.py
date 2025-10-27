@@ -7,25 +7,22 @@ def run_tests(code):
     feedback = ""
     test_results = {"passed": False}
 
-    # ✅ Remove extra indentation from user-submitted code
     code = textwrap.dedent(code).strip()
 
-    # ✅ Construct test code WITHOUT leading indentation
     test_code = f"""
-import unittest
+        import unittest
 
-{code}
+        {code}
 
-class TestGeneratedCode(unittest.TestCase):
-    def test_fibonacci_series(self):
-        if 'fibonacci_series' in globals():
-            self.assertEqual(fibonacci_series(1), [0])
-            self.assertEqual(fibonacci_series(5), [0, 1, 1, 2, 3])
-        else:
-            self.assertTrue(True)
+        class TestGeneratedCode(unittest.TestCase):
+            def test_fibonacci_series(self):
+                if 'fibonacci_series' in globals():
+                    self.assertEqual(fibonacci_series(1), [0])
+                    self.assertEqual(fibonacci_series(5), [0, 1, 1, 2, 3])
+                else:
+                    self.assertTrue(True)
 """
 
-    # ✅ Dedent final test code before execution
     test_code = textwrap.dedent(test_code)
 
     try:

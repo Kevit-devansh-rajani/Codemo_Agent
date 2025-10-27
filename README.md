@@ -88,5 +88,5 @@ This will open the Codemo web interface in your browser.
 ├── code_tester.py          # Tests the generated Python code
 ├── requirements.txt        # Project dependencies
 ├── README.md               # This file
-└── ...
+
 ```
