@@ -1,4 +1,4 @@
-# Codemo 🤖
+# Codemo Code Generation Agent 🤖
 
 Codemo is an AI-powered code generation tool that iteratively writes and refines Python code based on your requirements. It uses a powerful language model to generate code and then tests it, providing feedback to the AI for improvements until the code is correct.
 
@@ -49,8 +49,8 @@ Thanks to LiteLLM, you can easily switch to other language models like OpenAI's 
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repository-url>
-    cd <your-repository-name>
+    git clone https://github.com/Kevit-devansh-rajani/Codemo_Agent.git
+    cd Codemo_Agent
     ```
 
 2.  **Install dependencies:**
